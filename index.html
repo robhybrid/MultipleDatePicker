@@ -1,448 +1,386 @@
 <!DOCTYPE html>
-<html ng-app="demoApp">
-<head>
+<html>
+  <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/multiple-date-picker.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/custom.multiple-date-picker.css" media="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="javascripts/angular.min.js"></script>
-    <script type="text/javascript" src="javascripts/moment.min.js"></script>
-    <script type="text/javascript" src="javascripts/multipleDatePicker.min.js"></script>
-    <script type="text/javascript" src="javascripts/app.js"></script>
+
     <title>Multipledatepicker by arca-computing</title>
-</head>
+  </head>
 
-<body ng-controller="demoController">
-<div id="container">
-    <div class="inner">
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Multipledatepicker</h1>
+        <h2></h2>
+        <a href="https://github.com/arca-computing/MultipleDatePicker" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-        <header>
-            <h1>Multipledatepicker</h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="what-is-multipledatepicker-" class="anchor" href="#what-is-multipledatepicker-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is MultipleDatePicker ?</h1>
 
-            <h2>angular simple multiple dates picker</h2>
-        </header>
+<p>MultipleDatePicker is an Angular directive to show a simple calendar allowing user to select multiple dates, a callback is called, you can specify some off days or already selected days.</p>
 
-        <section id="downloads" class="clearfix">
-            <a href="https://github.com/arca-computing/MultipleDatePicker/zipball/master" id="download-zip"
-               class="button"><span>Download .zip</span></a>
-            <a href="https://github.com/arca-computing/MultipleDatePicker/tarball/master" id="download-tar-gz"
-               class="button"><span>Download .tar.gz</span></a>
-            <a href="https://github.com/arca-computing/MultipleDatePicker" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+<h1>
+<a id="get-it" class="anchor" href="#get-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get it</h1>
 
-        <hr>
+<h2>
+<a id="npm-style" class="anchor" href="#npm-style" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NPM style</h2>
 
-        <section id="main_content">
-            <h2><a class="anchor"><span class="octicon octicon-link"></span></a>What is MultipleDatePicker ?</h2>
+<pre><code>npm install multiple-date-picker --save
+</code></pre>
 
-            <p>MultipleDatePicker is an Angular directive to show a simple calendar allowing user to select multiple
-                dates, a callback is called, you can specify some off days or already selected days.</p>
+<h2>
+<a id="bower-style" class="anchor" href="#bower-style" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bower style</h2>
 
-            <h2><a class="anchor"><span class="octicon octicon-link"></span></a>Get it bower style</h2>
-            <pre><code>bower install multiple-date-picker</code></pre>
+<pre><code>bower install multiple-date-picker --save
+</code></pre>
 
-            <h2><a class="anchor"><span class="octicon octicon-link"></span></a>Get it git style</h2>
-            <pre><code>git clone https://github.com/arca-computing/MultipleDatePicker.git</code></pre>
+<h2>
+<a id="hipster-style" class="anchor" href="#hipster-style" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hipster style</h2>
 
+<pre><code>git clone https://github.com/arca-computing/MultipleDatePicker.git
+</code></pre>
 
-            <h2><a class="anchor"><span class="octicon octicon-link"></span></a>Time to use it</h2>
+<h1>
+<a id="time-to-use-it" class="anchor" href="#time-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time to use it</h1>
 
-            <h3><a class="anchor"><span class="octicon octicon-link"></span></a>Include files</h3>
+<p>Include at least css file</p>
 
-            <p>If you are using bower and grunt, you can use <a href="https://github.com/taptapship/wiredep">wiredep</a>
-                to auto include dependencies in your html file. If you want to include files manually, add those two :
-            </p>
-          <pre><code>&lt;script type="text/javascript" src="multipleDatePicker.min.js"&gt;&lt;/script&gt;
-              &lt;link rel="stylesheet" type="text/css" href="multiple-date-picker.css"/&gt;</code></pre>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>multiple-date-picker.css<span class="pl-pds">"</span></span>/&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>multipleDatePicker.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
-<h3><a class="anchor"><span class="octicon octicon-link"></span></a>If you don't use bower</h3>
+<p>If don't use something that gets dependencies for you, don't forget to include dependencies manually : Angular and MomentJS.</p>
 
-            <p>Don't forget to include dependencies manually : Angular and MomentJS.</p>
-            <p>To know what versions are used, check <a href="https://github.com/arca-computing/MultipleDatePicker/blob/master/bower.json">here</a>.</p>
-            
-            <h3><a class="anchor"><span class="octicon octicon-link"></span></a>Add it to your angular app</h3>
-            <pre><code>var app = angular.module('myApp', ['multipleDatePicker']);</code></pre>
+<h1>
+<a id="add-it-to-your-angular-app" class="anchor" href="#add-it-to-your-angular-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add it to your angular app</h1>
 
-            <h3><a class="anchor"><span class="octicon octicon-link"></span></a>Add it in your html</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> app <span class="pl-k">=</span> <span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>multipleDatePicker<span class="pl-pds">'</span></span>]);</pre></div>
 
-          <pre><code>&lt;div&gt;
-  &lt;multiple-date-picker/&gt;
-&lt;/div&gt;</code></pre>
-            <div>
-                <multiple-date-picker sunday-first-day="true"/>
-            </div>
-            <br>
+<h1>
+<a id="add-it-in-your-html" class="anchor" href="#add-it-in-your-html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add it in your html</h1>
 
-            <p>It will use the max width of it's parent, so If you want to reduce it specify a width (or use
-                Bootstrap/Foundation).</p>
-          <pre><code>&lt;div style="width:50%"&gt;
-  &lt;multiple-date-picker/&gt;
-&lt;/div&gt;</code></pre>
-            <div style="width:50%">
-                <multiple-date-picker/>
-            </div>
-        </section>
-        <hr>
-        <h3><a class="anchor"><span class="octicon octicon-link"></span></a>Add some options</h3>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;&lt;/<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-        <p>You can give options directly in the html.</p>
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Change current month</h4>
+<p>It will use the max width of it's parent, so If you want to reduce it specify a width (or use Bootstrap/Foundation).</p>
 
-        <p>You can change current month when you want</p>
-        <pre><code>&lt;multiple-date-picker month="myMonth" /&gt;</code></pre>
-        <pre><code>$scope.myMonth = moment().add(3, 'MONTH');</code></pre>
-        <div>
-            <multiple-date-picker month="myMonth"/>
-        </div>
-        <hr>
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>First day of week</h4>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>width:50%<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;&lt;/<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-        <p>By default Monday will be the first day of week, but you can set calendar to use Sunday as first day of
-            week</p>
-        <pre><code>&lt;!-- default behavior : monday as first day--&gt;
-&lt;multiple-date-picker /&gt;</code></pre>
-        <div>
-            <multiple-date-picker/>
-        </div>
-        <br/>
+<h1>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h1>
 
-        <p>Now we define Sunday as the first day of week</p>
-        <pre><code>&lt;!-- change behavior : sunday as first day--&gt;
-&lt;multiple-date-picker sunday-first-day="true" /&gt;</code></pre>
-        <div>
-            <multiple-date-picker sunday-first-day="true"/>
-        </div>
-        <hr>
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Show previous/next month days</h4>
+<h2>
+<a id="ngmodel" class="anchor" href="#ngmodel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ngModel</h2>
 
-        <p>You can show previous and next months days with this option. You can combine all 3 options to fit your needs.</p>
-        <p>
-            <ul>
-                <li>showDaysOfSurroundingMonths : if true empty boxes will be filled, default is false</li>
-                <li>cssDaysOfSurroundingMonths : applied css class to empty boxes. You can chain like 'myclass1 myclass2 myclass3', default is 'picker-empty'</li>
-                <li>fireEventsForDaysOfSurroundingMonths : fire events on empty boxes, default is false</li>
-            </ul>
-        </p>
-        <pre><code>&lt;multiple-date-picker
-    show-days-of-surrounding-months="true"
-    fire-events-for-days-of-surrounding-months="true"
-    css-days-of-surrounding-months="'picker-other-month-custom'"
-    highlight-days="highlightDays"
-    /&gt;</code></pre>
-        <p>We use custom (and pretty ugly I know) css to customize previous/next months dates and highlight days</p>
-        <pre><code>.picker-day.picker-other-month-custom{
-        background-color: #d17357;
-        color: #fff;
+<p>Major change since previous version, we now use a ngModel attribute. Bind your array of moment dates, watch it to get notified when a date is selected/unselected.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">myArrayOfDates</span> <span class="pl-k">=</span> [<span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">4</span>), <span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">5</span>), <span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">8</span>)];
+
+<span class="pl-smi">$scope</span>.<span class="pl-en">$watch</span>(<span class="pl-s"><span class="pl-pds">'</span>myArrayOfDates<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">newValue</span>, <span class="pl-smi">oldValue</span>){
+    <span class="pl-k">if</span>(newValue){
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>my array changed, new size : <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">newValue</span>.<span class="pl-c1">length</span>);
     }
+});</pre></div>
 
-    .picker-day.picker-other-month-custom:hover{
-        cursor: pointer;
-        background-color: #ae5d4a;
-        color: #fff;
-    }
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">ngModel</span>=<span class="pl-s"><span class="pl-pds">"</span>myArrayOfDates<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;</pre></div>
 
-    .picker-day.picker-other-month-custom.picker-selected{
-        background-color: #9c5244;
-    }
+<h2>
+<a id="month" class="anchor" href="#month" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>month</h2>
 
-    .picker-day.holiday{
-        background-color: #00ffa2;
-        color: #fff;
-    }
+<p>You can change current month when you want.</p>
 
-    .picker-day.holiday.picker-selected{
-        background-color: #00ae69;
-        color: #fff;
-    }
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">myMonth</span> <span class="pl-k">=</span> <span class="pl-en">moment</span>().<span class="pl-c1">add</span>(<span class="pl-c1">3</span>, <span class="pl-s"><span class="pl-pds">'</span>MONTH<span class="pl-pds">'</span></span>);</pre></div>
 
-    .picker-day.holiday.picker-off{
-        background-color: #00a267;
-        color: #fff;
-        cursor: default;
-    }
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">month</span>=<span class="pl-s"><span class="pl-pds">"</span>myMonth<span class="pl-pds">"</span></span> /&gt;</pre></div>
 
-    .picker-day.holiday:not(.picker-off):hover{
-        background-color: #00e795;
-        color: #fff;
-    }
+<h2>
+<a id="first-day-of-week" class="anchor" href="#first-day-of-week" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>First day of week</h2>
 
+<p>By default Monday will be the first day of week, but you can set calendar to use Sunday as first day of week</p>
 
-    .picker-day.birthday:not(.picker-selected){
-    background-color: #ded100;
-    color: #000;
-}</code></pre>
-        <div>
-            <multiple-date-picker show-days-of-surrounding-months="true"
-                                  fire-events-for-days-of-surrounding-months="true"
-                                  css-days-of-surrounding-months="'picker-other-month-custom'"
-                                  highlight-days="highlightDays"/>
-        </div>
-        <hr>
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Click callback</h4>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">sunday-first-day</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span> /&gt;</pre></div>
 
-        <p class="warning">Option "callback" has been deprecated, please use "day-click" instead</p>
+<h2>
+<a id="show-previousnext-month-days" class="anchor" href="#show-previousnext-month-days" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Show previous/next month days</h2>
 
-        <p>The callback will be called everytime a date is clicked. <strong>Be aware that the date given to the callback
-            is a day at midnight</strong>.</p>
+<p>You can show previous and next months days with this option. You can combine all 3 options to fit your needs.</p>
 
-        <p>This exemple shows how to pass a scope function that will prompt an alert with infos.</p>
-        <pre><code>&lt;multiple-date-picker day-click="logInfos"/&gt;</code></pre>
-        <p>The <code>logInfos</code> function will be called with a preventable event and the moment object:</p>
-        <pre><code>$scope.logInfos = function(event, date) {
-    event.preventDefault() // prevent the select to happen
-    console.log(date.valueOf()) //will give you the timestamp
-    //reproduce the standard behavior
-    date.selected = !date.selected
-}</code></pre>
-        <div>
-            <multiple-date-picker day-click="doDate"/>
-        </div>
-        <hr>
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Hover callback</h4>
-        <pre><code>&lt;multiple-date-picker day-hover="logInfos"/&gt;</code></pre>
-        <p>Same options as before</p>
-        <pre><code>$scope.logInfos = function(event, date) {
-    event.preventDefault() // prevent the date.hover to be toggled
-    console.log(date.valueOf()) //will give you the timestamp
-    if(event.type == 'mouseover') {
-        //we're on it!
-    }
-}</code></pre>
-        <div>
-            <multiple-date-picker day-hover="doDate"/>
-        </div>
-        <small>This will be showed to the web console</small>
-        <hr>
+<ul>
+<li>showDaysOfSurroundingMonths : if true empty boxes will be filled, default is false</li>
+<li>cssDaysOfSurroundingMonths : applied css class to empty boxes. You can chain like 'myclass1 myclass2 myclass3', default is 'picker-empty'</li>
+<li>fireEventsForDaysOfSurroundingMonths : fire events on empty boxes, default is false</li>
+</ul>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Month changed callback</h4>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>
+    <span class="pl-e">show-days-of-surrounding-months</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+    <span class="pl-e">fire-events-for-days-of-surrounding-months</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+    <span class="pl-e">css-days-of-surrounding-months</span>=<span class="pl-s"><span class="pl-pds">"</span>'picker-other-month-custom'<span class="pl-pds">"</span></span>
+    <span class="pl-e">highlight-days</span>=<span class="pl-s"><span class="pl-pds">"</span>highlightDays<span class="pl-pds">"</span></span>
+/&gt;</pre></div>
 
-        <p>The callback will be called everytime you change month (previous or next month). <strong>Be aware that
-            newMonth and oldMonth given to the callback is first day of month at midnight</strong>.</p>
+<p>We use custom (and pretty ugly I know) css to customize previous/next months dates and highlight days</p>
 
-        <p>This exemple shows how to pass a scope function that will prompt an alert with infos.</p>
-        <pre><code>&lt;multiple-date-picker month-changed="logMonthChanged"/&gt;</code></pre>
-        
-        <pre><code>$scope.logMonthChanged = function(newMonth, oldMonth){
-    alert('new month : ' + newMonth.format('YYYY-M-DD') + ' || old month : ' + oldMonth.format('YYYY-M-DD'));
-};</code></pre>
-        <div>
-            <multiple-date-picker month-changed="logMonthChanged"/>
-        </div>
-        <hr>
-
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>All Days-off</h4>
-
-        <p>Disable all dates in the calendar, default is false</p>
-        <pre><code>&lt;multiple-date-picker all-days-off="true"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker all-days-off="true"/>
-        </div>
-        <hr>
-
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Highlight-days</h4>
-        <p>This is an array containing dates you want to highlight, I can be a day-off like a bank day, holiday, your birthday, anything you want.</p>
-        <pre><code>{
-    date: Timestamp/String/Moment, //anything usable with moment
-    css: String //class applied, can be "class1" or "class1 class2 class3 ..."
-    selectable: true/false,
-    title: String //will be use in title attribute (show when cursor is hover)
-}</code></pre>
-        <p>The live demo represent the 2nd of month as holiday (not clickable), 14h a day off (not clickable) and the 25th is my birthday (not really, and clickable).</p>
-        <pre><code>$scope.highlightDays = [
-    {date: moment().date(2).valueOf(), css: 'holiday', selectable: false,title: 'Holiday time !'},
-    {date: moment().date(14).valueOf(), css: 'off', selectable: false,title: 'We don\'t work today'},
-    {date: moment().date(25).valueOf(), css: 'birthday', selectable: true,title: 'I\'m thir... i\'m 28, seriously, I mean ...'}
-];</code></pre>
-        <pre><code>&lt;multiple-date-picker highlight-days="highlightDays"/&gt;</code></pre>
-        <p>And here the css used for this demo</p>
-        <pre><code>/*apply colors if not selected, if selected I want the default selected css*/
-.picker-day.holiday:not(.picker-selected){
-    background-color: #00ffa2;
-    color: #fff;
+<div class="highlight highlight-source-css"><pre><span class="pl-e">.picker-day.picker-other-month-custom</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#d17357</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
 }
 
-/*if my holiday isn't clickable (it's the case in the demo)*/
-.picker-day.holiday.picker-off{
-    background-color: #00a267;
-    color: #fff;
-    cursor: default;
+<span class="pl-e">.picker-day.picker-other-month-custom</span><span class="pl-e">:hover</span>{
+    <span class="pl-c1"><span class="pl-c1">cursor</span></span>: <span class="pl-c1">pointer</span>;
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#ae5d4a</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
 }
 
-/*my birthday, is clickable*/
-.picker-day.birthday:not(.picker-selected){
-    background-color: #ded100;
-    color: #000;
-}</code></pre>
-        <div>
-            <multiple-date-picker highlight-days="highlightDays"/>
-        </div>
-        <hr>
+<span class="pl-e">.picker-day.picker-other-month-custom.picker-selected</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#9c5244</span>;
+}
+
+<span class="pl-e">.picker-day.holiday</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00ffa2</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+}
+
+<span class="pl-e">.picker-day.holiday.picker-selected</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00ae69</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+}
+
+<span class="pl-e">.picker-day.holiday.picker-off</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00a267</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+    <span class="pl-c1"><span class="pl-c1">cursor</span></span>: <span class="pl-c1">default</span>;
+}
+
+<span class="pl-e">.picker-day.holiday</span><span class="pl-e">:not</span>(<span class="pl-e">.picker-off</span>)<span class="pl-e">:hover</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00e795</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+}
 
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Days-off</h4>
+<span class="pl-e">.picker-day.birthday</span><span class="pl-e">:not</span>(<span class="pl-e">.picker-selected</span>){
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#ded100</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#000</span>;
+}</pre></div>
 
-        <p class="warning">Option "days-off" is deprecated since 1.2, please use "highlight-days" instead</p>
+<h2>
+<a id="dayclickdayhover" class="anchor" href="#dayclickdayhover" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dayClick/dayHover</h2>
 
-        <p>Those dates are not selectable (like bank days). It's an array of milliseconds timestamps.</p>
-        <pre><code>&lt;multiple-date-picker days-off="[1404770400000, 1405029600000]"/&gt;</code></pre>
-        <p>The live demo represent the 14h day off this month with this code sample. oneDayOff is a scope variable.</p>
-        <pre><code>&lt;multiple-date-picker days-off="oneDayOff"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker days-off="oneDayOff"/>
-        </div>
-        <hr>
+<p>You can use this callback to check something and prevent the event to happen (click will select/unselect date, hover will trigger hover event on the date).</p>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Week-days-off</h4>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">checkSelection</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-c1">event</span>, <span class="pl-smi">date</span>) {
+    <span class="pl-k">if</span>(<span class="pl-en">somethingWrongWithThisDate</span>(date)){
+        <span class="pl-c1">event</span>.<span class="pl-en">preventDefault</span>();
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>my click was prevented, want am I gonna do with my life ?<span class="pl-pds">'</span></span>);
+    }
+}</pre></div>
 
-        <p>Those are days for every week that are not selectable. Sunday = 0, Monday = 1 ... Saturday = 6.</p>
-        <pre><code>&lt;multiple-date-picker week-days-off="[0, 3]"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker week-days-off="[0, 3]"/>
-        </div>
-        <hr>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">day-click</span>=<span class="pl-s"><span class="pl-pds">"</span>checkSelection<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>&gt;</pre></div>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Days-selected</h4>
+<h2>
+<a id="all-days-off" class="anchor" href="#all-days-off" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>all-days-off</h2>
 
-        <p>Those are pre-selected dates when building the calendar. It's an array of milliseconds timestamps.</p>
-        <pre><code>&lt;multiple-date-picker days-selected="[1404770400000, 1405029600000]"/&gt;</code></pre>
-        <p>The live demo reprensent the 4th, 5th and 8th day this month with this code sample. selectedDays is a scope
-            variable.</p>
-        <pre><code>&lt;multiple-date-picker days-off="selectedDays"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker days-selected="selectedDays"/>
-        </div>
-        <hr>
+<p>Disable all dates in the calendar, default is false</p>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Disallow-back-past-months</h4>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">all-days-off</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-        <p>If true the back button to go previous month will be disabled if you are on today's month, so you can't go in
-            past month</p>
-        <pre><code>&lt;multiple-date-picker disallow-back-past-months="true"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker disallow-back-past-months="true"/>
-        </div>
-        <hr>
+<h2>
+<a id="highlight-days" class="anchor" href="#highlight-days" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Highlight-days</h2>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Disallow-go-futur-months</h4>
+<p>This is an array containing dates you want to highlight, I can be a day-off like a bank day, holiday, your birthday, anything you want.</p>
 
-        <p>If true the back button to go next month will be disabled if you are on today's month, so you can't go the
-            futur</p>
-        <pre><code>&lt;multiple-date-picker disallow-go-futur-months="true"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker disallow-go-futur-months="true"/>
-        </div>
-        <hr>
+<div class="highlight highlight-source-js"><pre>{
+    date<span class="pl-k">:</span> Timestamp<span class="pl-k">/</span><span class="pl-c1">String</span><span class="pl-k">/</span>Moment, <span class="pl-c">//anything usable with moment</span>
+    css<span class="pl-k">:</span> <span class="pl-c1">String</span> <span class="pl-c">//class applied, can be "class1" or "class1 class2 class3 ..."</span>
+    selectable<span class="pl-k">:</span> <span class="pl-c1">true</span><span class="pl-k">/</span><span class="pl-c1">false</span>,
+    title<span class="pl-k">:</span> <span class="pl-c1">String</span> <span class="pl-c">//will be use in title attribute (show when cursor is hover)</span>
+}</pre></div>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>disable-days-before</h4>
+<p>The live demo represent the 2nd of month as holiday (not clickable), 14h a day off (not clickable) and the 25th is my birthday (not really, and clickable).</p>
 
-        <p>If filled will disable all days before this one (not included)</p>
-        <pre><code>$scope.today = moment();</code></pre>
-        <pre><code>&lt;multiple-date-picker disable-days-before="today"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker disable-days-before="today"/>
-        </div>
-        <hr>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">highlightDays</span> <span class="pl-k">=</span> [
+    {date<span class="pl-k">:</span> <span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">2</span>).<span class="pl-c1">valueOf</span>(), css<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>holiday<span class="pl-pds">'</span></span>, selectable<span class="pl-k">:</span> <span class="pl-c1">false</span>,title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Holiday time !<span class="pl-pds">'</span></span>},
+    {date<span class="pl-k">:</span> <span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">14</span>).<span class="pl-c1">valueOf</span>(), css<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>off<span class="pl-pds">'</span></span>, selectable<span class="pl-k">:</span> <span class="pl-c1">false</span>,title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>We don<span class="pl-cce">\'</span>t work today<span class="pl-pds">'</span></span>},
+    {date<span class="pl-k">:</span> <span class="pl-en">moment</span>().<span class="pl-en">date</span>(<span class="pl-c1">25</span>).<span class="pl-c1">valueOf</span>(), css<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>birthday<span class="pl-pds">'</span></span>, selectable<span class="pl-k">:</span> <span class="pl-c1">true</span>,title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>I<span class="pl-cce">\'</span>m thir... i<span class="pl-cce">\'</span>m 28, seriously, I mean ...<span class="pl-pds">'</span></span>}
+];</pre></div>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>disable-days-after</h4>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">highlight-days</span>=<span class="pl-s"><span class="pl-pds">"</span>highlightDays<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-        <p>If filled will disable all days after this one (not included)</p>
-        <pre><code>$scope.today = moment();</code></pre>
-        <pre><code>&lt;multiple-date-picker disable-days-after="today"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker disable-days-after="today"/>
-        </div>
-        <hr>
+<p>And here the css used for this demo</p>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Emit reset</h4>
+<div class="highlight highlight-source-css"><pre><span class="pl-c">/*apply colors if not selected, if selected I want the default selected css*/</span>
+<span class="pl-e">.picker-day.holiday</span><span class="pl-e">:not</span>(<span class="pl-e">.picker-selected</span>){
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00ffa2</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+}
 
-        <p>You can reset calendar using the factory multipleDatePickerBroadcast</p>
-        <p>
-            <div class="clickable" ng-click="clicReset()">click me to reset keeping daysSelected (clicReset)</div>
-            <div class="clickable" ng-click="clicResetFull()">click me to reset without keeping daysSelected (clicResetFull)</div>
-        </p>
+<span class="pl-c">/*if my holiday isn't clickable (it's the case in the demo)*/</span>
+<span class="pl-e">.picker-day.holiday.picker-off</span>{
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#00a267</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span>;
+    <span class="pl-c1"><span class="pl-c1">cursor</span></span>: <span class="pl-c1">default</span>;
+}
 
-        <pre><code>$scope.clicReset = function(){
-    multipleDatePickerBroadcast.resetOrder('myId');
+<span class="pl-c">/*my birthday, is clickable*/</span>
+<span class="pl-e">.picker-day.birthday</span><span class="pl-e">:not</span>(<span class="pl-e">.picker-selected</span>){
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#ded100</span>;
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#000</span>;
+}</pre></div>
+
+<h2>
+<a id="week-days-off" class="anchor" href="#week-days-off" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Week-days-off</h2>
+
+<p>Those are days for every week that are not selectable. Sunday = 0, Monday = 1 ... Saturday = 6.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">week-days-off</span>=<span class="pl-s"><span class="pl-pds">"</span>[0, 3]<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="disable-days-before" class="anchor" href="#disable-days-before" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disable-days-before</h2>
+
+<p>If filled will disable all days before this one (not included)</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">today</span> <span class="pl-k">=</span> <span class="pl-en">moment</span>();</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">disable-days-before</span>=<span class="pl-s"><span class="pl-pds">"</span>today<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="disable-days-after" class="anchor" href="#disable-days-after" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disable-days-after</h2>
+
+<p>If filled will disable all days after this one (not included)</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">today</span> <span class="pl-k">=</span> <span class="pl-en">moment</span>();</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">disable-days-after</span>=<span class="pl-s"><span class="pl-pds">"</span>today<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="month-changed" class="anchor" href="#month-changed" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>month-changed</h2>
+
+<p>The callback will be called everytime you change month (previous or next month). 
+<em>Be aware that newMonth and oldMonth given to the callback is first day of month at midnight.</em></p>
+
+<p>This exemple shows how to pass a scope function that will prompt an alert with infos.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">logMonthChanged</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">newMonth</span>, <span class="pl-smi">oldMonth</span>){
+    <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>new month : <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">newMonth</span>.<span class="pl-en">format</span>(<span class="pl-s"><span class="pl-pds">'</span>YYYY-M-DD<span class="pl-pds">'</span></span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> || old month : <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">oldMonth</span>.<span class="pl-en">format</span>(<span class="pl-s"><span class="pl-pds">'</span>YYYY-M-DD<span class="pl-pds">'</span></span>));
+};</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">month-changed</span>=<span class="pl-s"><span class="pl-pds">"</span>logMonthChanged<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="disallow-back-past-months" class="anchor" href="#disallow-back-past-months" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disallow-back-past-months</h2>
+
+<p>If true the back button to go previous month will be disabled if you are on today's month, so you can't go in past month</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">disallow-back-past-months</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="disallow-go-futur-months" class="anchor" href="#disallow-go-futur-months" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disallow-go-futur-months</h2>
+
+<p>If true the back button to go next month will be disabled if you are on today's month, so you can't go the futur</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">disallow-go-futur-months</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="emit-reset" class="anchor" href="#emit-reset" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Emit reset</h2>
+
+<p>You can reset calendar using the factory multipleDatePickerBroadcast</p>
+
+<p>click me to reset keeping daysSelected (clicReset)
+click me to reset without keeping daysSelected (clicResetFull)</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">clicReset</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){
+    <span class="pl-smi">multipleDatePickerBroadcast</span>.<span class="pl-en">resetOrder</span>(<span class="pl-s"><span class="pl-pds">'</span>myId<span class="pl-pds">'</span></span>);
 };
 
-$scope.clicResetFull = function(){
-    $scope.selectedDays2 = []; //trigger a reset today but now is deprecated
-    multipleDatePickerBroadcast.resetOrder('myId');
-};</code></pre>
+<span class="pl-smi">$scope</span>.<span class="pl-en">clicResetFull</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){
+    <span class="pl-smi">$scope</span>.<span class="pl-smi">selectedDays2</span> <span class="pl-k">=</span> []; <span class="pl-c">//trigger a reset today but now is deprecated</span>
+    <span class="pl-smi">multipleDatePickerBroadcast</span>.<span class="pl-en">resetOrder</span>(<span class="pl-s"><span class="pl-pds">'</span>myId<span class="pl-pds">'</span></span>);
+};</pre></div>
 
-        <pre><code>&lt;multiple-date-picker calendar-id="'myId'" days-selected="selectedDays2"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker calendar-id="'myId'" days-selected="selectedDays2"/>
-        </div>
-        <hr>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">calendar-id</span>=<span class="pl-s"><span class="pl-pds">"</span>'myId'<span class="pl-pds">"</span></span> <span class="pl-e">days-selected</span>=<span class="pl-s"><span class="pl-pds">"</span>selectedDays2<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>One day selection only</h4>
+<h1>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
 
-        <p>You want user to be able to select only one day, that's not a problem. Try to select multiple days, you'll not be able. Yeah we call it MAGIC !</p>
+<h2>
+<a id="one-day-selection-only" class="anchor" href="#one-day-selection-only" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>One day selection only</h2>
 
-        <pre><code>$scope.selectedDays3 = [];
+<p>You want user to be able to select only one day, that's not a problem. Try to select multiple days, you'll not be able. Yeah we call it MAGIC !</p>
 
-$scope.oneDaySelectionOnly = function (event, date) {
-    event.preventDefault();
-    $scope.selectedDays3 = [];
-    if(!date.selected){ //selected not affected yet, so if day is selected, selected property will be false
-        $scope.selectedDays3.push(date);
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">selectedDays3</span> <span class="pl-k">=</span> [];
+
+<span class="pl-smi">$scope</span>.<span class="pl-en">oneDaySelectionOnly</span> <span class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-c1">event</span>, <span class="pl-smi">date</span>) {
+    <span class="pl-c1">event</span>.<span class="pl-en">preventDefault</span>();
+    <span class="pl-smi">$scope</span>.<span class="pl-smi">selectedDays3</span> <span class="pl-k">=</span> [];
+    <span class="pl-k">if</span>(<span class="pl-k">!</span><span class="pl-smi">date</span>.<span class="pl-c1">selected</span>){ <span class="pl-c">//selected not affected yet, so if day is selected, selected property will be false</span>
+        <span class="pl-smi">$scope</span>.<span class="pl-smi">selectedDays3</span>.<span class="pl-c1">push</span>(date);
     }
-    multipleDatePickerBroadcast.resetOrder('myId2');
-};</code></pre>
+    <span class="pl-smi">multipleDatePickerBroadcast</span>.<span class="pl-en">resetOrder</span>(<span class="pl-s"><span class="pl-pds">'</span>myId2<span class="pl-pds">'</span></span>);
+};</pre></div>
 
-        <pre><code>&lt;multiple-date-picker calendar-id="'myId2'" days-selected="selectedDays3" day-click="oneDaySelectionOnly"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker calendar-id="'myId2'" days-selected="selectedDays3" day-click="oneDaySelectionOnly"/>
-        </div>
-        <hr>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">calendar-id</span>=<span class="pl-s"><span class="pl-pds">"</span>'myId2'<span class="pl-pds">"</span></span> <span class="pl-e">days-selected</span>=<span class="pl-s"><span class="pl-pds">"</span>selectedDays3<span class="pl-pds">"</span></span> <span class="pl-e">day-click</span>=<span class="pl-s"><span class="pl-pds">"</span>oneDaySelectionOnly<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-        <h4><a class="anchor"><span class="octicon octicon-link"></span></a>Let's get serious</h4>
+<h2>
+<a id="lets-get-serious" class="anchor" href="#lets-get-serious" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Let's get serious</h2>
 
-        <p>You can (of course) use all options at the same time.</p>
-        <pre><code>&lt;multiple-date-picker
-            days-off="oneDayOff"
-            days-selected="selectedDays"
-            week-days-off="[0]"
-            day-click="logInfos"/&gt;</code></pre>
-        <div>
-            <multiple-date-picker days-off="oneDayOff" days-selected="selectedDays" week-days-off="[0]"
-                                  day-click="doDate"/>
-        </div>
-        <hr>
+<p>You can (of course) use all options at the same time.</p>
 
-        <h3><a class="anchor"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span>
+    <span class="pl-e">days-off</span>=<span class="pl-s"><span class="pl-pds">"</span>oneDayOff<span class="pl-pds">"</span></span>
+    <span class="pl-e">days-selected</span>=<span class="pl-s"><span class="pl-pds">"</span>selectedDays<span class="pl-pds">"</span></span>
+    <span class="pl-e">week-days-off</span>=<span class="pl-s"><span class="pl-pds">"</span>[0]<span class="pl-pds">"</span></span>
+    <span class="pl-e">day-click</span>=<span class="pl-s"><span class="pl-pds">"</span>logInfos<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-        <p>The calendar uses 3 dependencies you must add to your project : <a href="http://angularjs.org/">angular</a>
-            of course and <a href="http://momentjs.com/">moment.js</a>.
-        </p>
+<h1>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h1>
 
-        <p>Because we use moment.js, you can load a language file and change the calendar language (days and months
-            names), like this :</p>
-        <pre><code>moment.lang('fr');
-var app = angular.module...</code></pre>
-        <p>Week days order, week days names and month + year format cannot be changed with an option.</p>
+<p>The calendar uses 2 dependencies you must add to your project : angular of course and moment.js.</p>
 
-        <h2><a class="anchor"><span class="octicon octicon-link"></span></a>What's next ?</h2>
+<p>Because we use moment.js, you can load a language file and change the calendar language (days and months names), like this :</p>
 
-        <p>We created this directive to have a simple calendar with multi-dates selection. We will keep it simple but
-            any improvement is welcome.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">moment</span>.<span class="pl-c1">lang</span>(<span class="pl-s"><span class="pl-pds">'</span>fr<span class="pl-pds">'</span></span>);
+<span class="pl-k">var</span> app <span class="pl-k">=</span> <span class="pl-smi">angular</span>.<span class="pl-smi">module</span><span class="pl-k">...</span></pre></div>
 
-        <footer>
-            Multipledatepicker is maintained by <a href="https://github.com/arca-computing">arca-computing</a><br>
-            This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a
-                href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<p>Week days order, week days names and month + year format cannot be changed with an option.</p>
 
+<h1>
+<a id="whats-next-" class="anchor" href="#whats-next-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's next ?</h1>
 
+<p>We created this directive to have a simple calendar with multi-dates selection. We will keep it simple but any improvement is welcome.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/arca-computing/MultipleDatePicker/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/arca-computing/MultipleDatePicker/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/arca-computing/MultipleDatePicker"></a> is maintained by <a href="https://github.com/arca-computing">arca-computing</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-</div>
-</body>
+
+  
+  </body>
 </html>
