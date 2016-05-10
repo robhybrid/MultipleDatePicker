@@ -337,6 +337,20 @@ angular.module('yourApp', [..., mdp]);
             <multiple-date-picker all-days-off="true"></multiple-date-picker>
 
             <h2>
+                <a id="days-allowed" class="anchor" href="#days-allowed" aria-hidden="true"><span aria-hidden="true"
+                                                                                                  class="octicon octicon-link"></span></a>days-allowed
+            </h2>
+
+            <p>Enable only some dates, it's an array of moment dates</p>
+
+            <div class="highlight highlight-text-html-basic">
+                <pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">days-allowed</span>=<span
+                        class="pl-s"><span class="pl-pds">"</span>daysAllowed<span class="pl-pds">"</span></span>/&gt;</pre>
+            </div>
+
+            <multiple-date-picker days-allowed="daysAllowed"></multiple-date-picker>
+
+            <h2>
                 <a id="highlight-days" class="anchor" href="#highlight-days" aria-hidden="true"><span aria-hidden="true"
                                                                                                       class="octicon octicon-link"></span></a>Highlight-days
             </h2>
@@ -608,6 +622,7 @@ angular.module('yourApp', [..., mdp]);
                     <li><a href="#show-previousnext-month-days">show-previousnext-month-days</a></li>
                     <li><a href="#dayclickdayhover">dayclickdayhover</a></li>
                     <li><a href="#all-days-off">all-days-off</a></li>
+                    <li><a href="#days-allowed">days-allowed</a></li>
                     <li><a href="#highlight-days">highlight-days</a></li>
                     <li><a href="#week-days-off">week-days-off</a></li>
                     <li><a href="#disable-days-before">disable-days-before</a></li>

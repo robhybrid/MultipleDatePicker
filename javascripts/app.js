@@ -14,6 +14,8 @@ app.controller('demoController', ['$scope', function ($scope) {
     $scope.selectedDays2 = [moment().date(4), moment().date(5), moment().date(8)];
     $scope.selectedDays3 = [];
 
+    $scope.daysAllowed = [moment().date(4), moment().date(5), moment().date(8)];
+
     $scope.myArrayOfDates = [moment().date(4), moment().date(5), moment().date(8)];
 
     $scope.$watch('myArrayOfDates', function(newValue){
