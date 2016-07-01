@@ -16,7 +16,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script type="text/javascript" src="javascripts/angular.min.js"></script>
-    <script type="text/javascript" src="javascripts/moment.min.js"></script>
+    <script type="text/javascript" src="javascripts/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="javascripts/moment-timezone.js"></script>
     <script type="text/javascript" src="javascripts/multipleDatePicker.min.js"></script>
     <script type="text/javascript" src="javascripts/app.js"></script>
     <title>Multipledatepicker by arca-computing</title>
@@ -140,6 +141,23 @@ angular.module('yourApp', [..., mdp]);
             <div style="width:50%">
                 <multiple-date-picker></multiple-date-picker>
             </div>
+
+            <h1>
+                <a id="momentjs" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true"
+                                                                                        class="octicon octicon-link"></span></a>Take a moment for MomentJS
+                <h2>
+                    <a id="momentjs-locale" class="anchor" href="#ngmodel" aria-hidden="true"><span aria-hidden="true"
+                                                                                            class="octicon octicon-link"></span></a>Change locale
+                </h2>
+                <p>You can change MomentJS locale, the datepicker is listening to this changement and will update days and month labels</p>
+                <p>Test it, it'll change locale for whole demo page : <a href="" ng-click="changeMomentLocale('en-EN')">EN</a> - <a href="" ng-click="changeMomentLocale('fr-FR')">FR</a></p>
+
+                <div class="highlight highlight-text-html-basic">
+                    <pre>moment.locale('fr-FR');</pre>
+                </div>
+
+
+            </h1>
 
             <h1>
                 <a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true"
@@ -579,7 +597,7 @@ angular.module('yourApp', [..., mdp]);
                                                                                                   class="octicon octicon-link"></span></a>Dependencies
             </h1>
 
-            <p>The calendar uses 2 dependencies you must add to your project : angular of course and moment.js.</p>
+            <p>The calendar uses 2 dependencies you must add to your project : angular of course, moment and moment-timezone.</p>
 
             <p>Because we use moment.js, you can load a language file and change the calendar language (days and months
                 names), like this :</p>
@@ -615,6 +633,11 @@ angular.module('yourApp', [..., mdp]);
                 <ul>
                     <li><a href="#add-it-to-your-angular-app">Add it to your angular app</a></li>
                     <li><a href="#add-it-in-your-html">Add it to your html</a></li>
+                    <li><a href="#momentjs">MomentJS</a>
+                        <ul>
+                            <li><a href="#momentjs-locale">Change locale</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#options">Options</a></li>
                     <li><a href="#ngmodel">ngmodel</a></li>
                     <li><a href="#month">month</a></li>

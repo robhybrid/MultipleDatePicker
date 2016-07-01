@@ -576,6 +576,10 @@ ul, ol, dl {
   margin-bottom: 20px;
 }
 
+li > ul {
+  margin-bottom: 0;
+}
+
 
 /* COMMON STYLES */
 
