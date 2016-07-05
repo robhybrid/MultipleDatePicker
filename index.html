@@ -525,6 +525,21 @@ angular.module('yourApp', [..., mdp]);
             <multiple-date-picker month-changed="logMonthChanged"></multiple-date-picker>
 
             <h2>
+                <a id="disable-navigation" class="anchor" href="#disable-navigation"
+                   aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disable-navigation
+            </h2>
+
+            <p>If true the back button to go previous month will be disabled if you are on today's month, so you can't
+                go in past month</p>
+
+            <div class="highlight highlight-text-html-basic">
+                <pre>&lt;<span class="pl-ent">multiple</span><span class="pl-e">-date-picker</span> <span class="pl-e">disable-navigation</span>=<span
+                        class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>/&gt;</pre>
+            </div>
+
+            <multiple-date-picker disable-navigation="true"></multiple-date-picker>
+
+            <h2>
                 <a id="disallow-back-past-months" class="anchor" href="#disallow-back-past-months"
                    aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disallow-back-past-months
             </h2>
@@ -651,6 +666,7 @@ angular.module('yourApp', [..., mdp]);
                     <li><a href="#disable-days-before">disable-days-before</a></li>
                     <li><a href="#disable-days-after">disable-days-after</a></li>
                     <li><a href="#month-changed">month-changed</a></li>
+                    <li><a href="#disable-navigation">disable-navigation</a></li>
                     <li><a href="#disallow-back-past-months">disallow-back-past-months</a></li>
                     <li><a href="#disallow-go-futur-months">disallow-go-futur-months</a></li>
                 </ul>
